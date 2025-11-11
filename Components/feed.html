@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Club Feed - Scrollable Container</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fafafa;
+    }
+    
+    #feed-container {
+    height: 100vh;
+    width: 650px;
+    margin: 0 auto;
+    overflow-y: auto;
+    border: 2px solid orange;
+    box-sizing: border-box;
+    padding: 16px 0;
+    background: #fff;
+    scroll-margin: 0px;
+
+    /* Hide scrollbar - for Webkit browsers (Chrome, Safari) */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    }
+
+    #feed-container::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+    }
+
+    .club_feed-post {
+      background: #fff;
+      width: 100%;
+      margin: 16px auto;
+      border-radius: 16px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      border: 1px solid #e6e6e6;
+      overflow: hidden;
+    }
+    .club_feed-header {
+      display: flex;
+      align-items: center;
+      padding: 16px;
+    }
+    .club_feed-profile-img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 10px;
+      border: 2px solid #e1306c;
+    }
+    .club_feed-username {
+      font-weight: 600;
+      color: #333;
+      margin-right: auto;
+    }
+    .club_feed-menu {
+      font-size: 22px;
+      color: #bbb;
+      cursor: pointer;
+    }
+    .club_feed-image {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+    }
+    .club_feed-actions {
+      display: flex;
+      align-items: center;
+      padding: 10px 16px 0 16px;
+    }
+    .club_feed-action-btn {
+      font-size: 24px;
+      margin-right: 18px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .club_feed-action-btn.liked {
+      color: #e1306c;
+    }
+    .club_feed-likes {
+      padding: 4px 16px 0 16px;
+      font-weight: bold;
+      color: #333;
+      font-size: 15px;
+      text-align: left;
+    }
+    .club_feed-caption {
+      padding: 0 16px 16px 16px;
+      font-size: 15px;
+      color: #333;
+      position: relative;
+      line-height: 1.4;
+    }
+    .club_feed-caption .caption-text {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .club_feed-caption.expanded .caption-text {
+      display: block;
+      -webkit-line-clamp: unset;
+      -webkit-box-orient: unset;
+      overflow: visible;
+      text-overflow: unset;
+    }
+    .club_feed-more {
+      color: #1976d2;
+      cursor: pointer;
+      font-weight: bold;
+      margin-left: 4px;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- single post -->
+  <div id="feed-container">
+    <div class="club_feed-post">
+      <div class="club_feed-header">
+        <img class="club_feed-profile-img" src="/Code/profile_icon.png" alt="profile" />
+        <span class="club_feed-username">Rahul Jain</span>
+        <span class="club_feed-menu">&#x22EE;</span>
+      </div>
+      <img class="club_feed-image" src="./temp.png" alt="post" />
+      <div class="club_feed-actions">
+        <span class="club_feed-action-btn likeBtn">&#x2764;&#xFE0F;</span>
+        <span class="club_feed-action-btn">&#x1F5E8;</span>
+        <span class="club_feed-action-btn">&#x1F517;</span>
+      </div>
+      <div class="club_feed-likes">0 likes</div>
+      <div class="club_feed-caption">
+        <span class="club_feed-username">Rahul Jain<br></span>
+        <span class="caption-text">
+          Beautiful sunset view from my window 🌇. Today was amazing, with bright colors everywhere as the
+          light faded into dusk. Loved sharing this view with friends and family. Looking forward to seeing
+          more moments like this soon and hope you all had a great day too! #sunset #clubfeed #naturelover
+          #happyvibes
+        </span>
+        <span class="club_feed-more" style="display:none;">more...</span>
+      </div>
+    </div>
+
+
+    <!-- Repeat  -->
+    <div class="club_feed-post">
+      <div class="club_feed-header">
+        <img class="club_feed-profile-img" src="/Code/profile_icon.png" alt="profile" />
+        <span class="club_feed-username">Jacky the Joker</span>
+        <span class="club_feed-menu">&#x22EE;</span>
+      </div>
+      <img class="club_feed-image" src="./temp.png" alt="post" />
+      <div class="club_feed-actions">
+        <span class="club_feed-action-btn likeBtn">&#x2764;&#xFE0F;</span>
+        <span class="club_feed-action-btn">&#x1F5E8;</span>
+        <span class="club_feed-action-btn">&#x1F517;</span>
+      </div>
+      <div class="club_feed-likes">0 likes</div>
+      <div class="club_feed-caption">
+        <span class="club_feed-username">Rahul Jain<br></span>
+        <span class="caption-text">
+          Beautiful sunset view from my window 🌇. Today was amazing, with bright colors everywhere as the
+          light faded into dusk. Loved sharing this view with friends and family. Looking forward to seeing
+          more moments like this soon and hope you all had a great day too! #sunset #clubfeed #naturelover
+          #happyvibes
+        </span>
+        <span class="club_feed-more" style="display:none;">more...</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Like buttons functionality
+    document.querySelectorAll('.club_feed-post').forEach(post => {
+      const likeBtn = post.querySelector('.likeBtn');
+      const likesCount = post.querySelector('.club_feed-likes');
+      let liked = false;
+      let count = 0;
+
+      likeBtn.addEventListener('click', () => {
+        liked = !liked;
+        if (liked) {
+          count++;
+          likeBtn.classList.add('liked');
+        } else {
+          count--;
+          likeBtn.classList.remove('liked');
+        }
+        likesCount.textContent = count + ' like' + (count !== 1 ? 's' : '');
+      });
+
+      // Caption "more..."
+      const captionText = post.querySelector('.caption-text');
+      const moreBtn = post.querySelector('.club_feed-more');
+      const captionContainer = post.querySelector('.club_feed-caption');
+
+      function checkCaption() {
+        const words = captionText.textContent.trim().split(/\s+/);
+        const needsMore = words.length > 20 || captionText.scrollHeight > captionText.offsetHeight + 6;
+        if (needsMore) {
+          moreBtn.style.display = 'inline';
+        } else {
+          moreBtn.style.display = 'none';
+        }
+      }
+
+      checkCaption();
+
+      if(moreBtn) {
+        moreBtn.addEventListener('click', () => {
+          captionContainer.classList.toggle('expanded');
+          moreBtn.textContent = captionContainer.classList.contains('expanded') ? 'less' : 'more...';
+        });
+      }
+    });
+  </script>
+</body>
+</html>
