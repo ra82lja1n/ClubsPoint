@@ -5,7 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Club Feed - Scrollable Container</title>
   <style>
-    html, body {
+  .feed-component {
+  height: auto !important;
+  width: 100% !important;
+  overflow-y: visible !important;
+  border: none; /* Customize */
+  }
+
+    #feed {
       height: 100%;
       margin: 0;
       overflow: hidden;
@@ -123,56 +130,58 @@
 </head>
 <body>
   <!-- single post -->
-  <div id="feed-container">
-    <div class="club_feed-post">
-      <div class="club_feed-header">
-        <img class="club_feed-profile-img" src="/Code/profile_icon.png" alt="profile" />
-        <span class="club_feed-username">Rahul Jain</span>
-        <span class="club_feed-menu">&#x22EE;</span>
+  <div id="feed-compnent">
+    <div id="feed-container">
+      <div class="club_feed-post">
+        <div class="club_feed-header">
+          <img class="club_feed-profile-img" src="/Code/profile_icon.png" alt="profile" />
+          <span class="club_feed-username">Rahul Jain</span>
+          <span class="club_feed-menu">&#x22EE;</span>
+        </div>
+        <img class="club_feed-image" src="./temp.png" alt="post" />
+        <div class="club_feed-actions">
+          <span class="club_feed-action-btn likeBtn">&#x2764;&#xFE0F;</span>
+          <span class="club_feed-action-btn">&#x1F5E8;</span>
+          <span class="club_feed-action-btn">&#x1F517;</span>
+        </div>
+        <div class="club_feed-likes">0 likes</div>
+        <div class="club_feed-caption">
+          <span class="club_feed-username">Rahul Jain<br></span>
+          <span class="caption-text">
+            Beautiful sunset view from my window 🌇. Today was amazing, with bright colors everywhere as the
+            light faded into dusk. Loved sharing this view with friends and family. Looking forward to seeing
+            more moments like this soon and hope you all had a great day too! #sunset #clubfeed #naturelover
+            #happyvibes
+          </span>
+          <span class="club_feed-more" style="display:none;">more...</span>
+        </div>
       </div>
-      <img class="club_feed-image" src="./temp.png" alt="post" />
-      <div class="club_feed-actions">
-        <span class="club_feed-action-btn likeBtn">&#x2764;&#xFE0F;</span>
-        <span class="club_feed-action-btn">&#x1F5E8;</span>
-        <span class="club_feed-action-btn">&#x1F517;</span>
-      </div>
-      <div class="club_feed-likes">0 likes</div>
-      <div class="club_feed-caption">
-        <span class="club_feed-username">Rahul Jain<br></span>
-        <span class="caption-text">
-          Beautiful sunset view from my window 🌇. Today was amazing, with bright colors everywhere as the
-          light faded into dusk. Loved sharing this view with friends and family. Looking forward to seeing
-          more moments like this soon and hope you all had a great day too! #sunset #clubfeed #naturelover
-          #happyvibes
-        </span>
-        <span class="club_feed-more" style="display:none;">more...</span>
-      </div>
-    </div>
 
 
-    <!-- Repeat  -->
-    <div class="club_feed-post">
-      <div class="club_feed-header">
-        <img class="club_feed-profile-img" src="/Code/profile_icon.png" alt="profile" />
-        <span class="club_feed-username">Jacky the Joker</span>
-        <span class="club_feed-menu">&#x22EE;</span>
-      </div>
-      <img class="club_feed-image" src="./temp.png" alt="post" />
-      <div class="club_feed-actions">
-        <span class="club_feed-action-btn likeBtn">&#x2764;&#xFE0F;</span>
-        <span class="club_feed-action-btn">&#x1F5E8;</span>
-        <span class="club_feed-action-btn">&#x1F517;</span>
-      </div>
-      <div class="club_feed-likes">0 likes</div>
-      <div class="club_feed-caption">
-        <span class="club_feed-username">Rahul Jain<br></span>
-        <span class="caption-text">
-          Beautiful sunset view from my window 🌇. Today was amazing, with bright colors everywhere as the
-          light faded into dusk. Loved sharing this view with friends and family. Looking forward to seeing
-          more moments like this soon and hope you all had a great day too! #sunset #clubfeed #naturelover
-          #happyvibes
-        </span>
-        <span class="club_feed-more" style="display:none;">more...</span>
+      <!-- Repeat  -->
+      <div class="club_feed-post">
+        <div class="club_feed-header">
+          <img class="club_feed-profile-img" src="/Code/profile_icon.png" alt="profile" />
+          <span class="club_feed-username">Jacky the Joker</span>
+          <span class="club_feed-menu">&#x22EE;</span>
+        </div>
+        <img class="club_feed-image" src="./temp.png" alt="post" />
+        <div class="club_feed-actions">
+          <span class="club_feed-action-btn likeBtn">&#x2764;&#xFE0F;</span>
+          <span class="club_feed-action-btn">&#x1F5E8;</span>
+          <span class="club_feed-action-btn">&#x1F517;</span>
+        </div>
+        <div class="club_feed-likes">0 likes</div>
+        <div class="club_feed-caption">
+          <span class="club_feed-username">Rahul Jain<br></span>
+          <span class="caption-text">
+            Beautiful sunset view from my window 🌇. Today was amazing, with bright colors everywhere as the
+            light faded into dusk. Loved sharing this view with friends and family. Looking forward to seeing
+            more moments like this soon and hope you all had a great day too! #sunset #clubfeed #naturelover
+            #happyvibes
+          </span>
+          <span class="club_feed-more" style="display:none;">more...</span>
+        </div>
       </div>
     </div>
   </div>
